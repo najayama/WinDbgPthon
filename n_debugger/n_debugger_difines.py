@@ -14,7 +14,7 @@ HANDLE  = cty.c_void_p
 
 
 #定数
-DEBUG_PROCESS = 0x00000001
+DEBUG_PROCESS      = 0x00000001
 CREATE_NEW_CONSOLE = 0x00000010
 
 #関数CreateprocessA()のための構造体
