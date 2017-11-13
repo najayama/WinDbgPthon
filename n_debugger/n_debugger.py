@@ -9,6 +9,11 @@ class debugger():
     def __init__(self):
         pass
     
+    def get_error(self):
+        print("[*] Error: 0x%08x." % kernel32.GetLastError())
+        print("See https://msdn.microsoft.com/en-us/library/cc231199.aspx\
+ for more detail.")
+    
     def load(self, path_to_exe):
         
         #dwcreationflagsのための定数
@@ -38,7 +43,7 @@ class debugger():
             print( "PID: %d" % (process_information.dwProcessId))
             return None
         else:
-            print("[*] Error: 0x%08x." % kernel32.GetLastError())
+            self.get_error()
             return None
         
 
