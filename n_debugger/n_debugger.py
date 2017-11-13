@@ -34,8 +34,9 @@ class debugger():
                                    None,
                                    cty.byref(startupinfo),
                                    cty.byref(process_information)):
-            print("success")
-            return 0
+            print("Succusessfuly loanch the prsess!")
+            print( "PID: %d" % (process_information.dwProcessId))
+            return None
         else:
             print("[*] Error: 0x%08x." % kernel32.GetLastError())
             return None
